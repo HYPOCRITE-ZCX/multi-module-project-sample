@@ -1,0 +1,23 @@
+### 账号登录
+POST http://127.0.0.1:9091/account/login
+Content-Type: application/json
+
+{
+  "username": "zcx",
+  "password": "1206",
+  "email": null
+}
+###
+
+### 账号注册
+POST http://127.0.0.1:9091/account/register
+Content-Type: application/json
+
+{
+  "account": "fsdfsdf",
+  "password": "123456",
+  "username": "HYPO_HJI",
+  "mail": "946208182@qq.com",
+  "authCode": 1234
+}
+###

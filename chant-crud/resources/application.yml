@@ -1,0 +1,16 @@
+server:
+  port: 9091
+
+spring:
+  profiles:
+    active: dev
+
+
+mybatis:
+  mapper-locations: classpath:root/module/**/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+
+
+
+
