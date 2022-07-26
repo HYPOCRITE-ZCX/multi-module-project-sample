@@ -47,8 +47,8 @@ public class InterceptorConfig implements WebMvcConfigurer {
         /**
          * 将每次请求头携带的用户信息保存，这样就不用在各个接口中在传用户相关的信息了，比用用户id
          *
-         * @param request
-         * @param response
+         * @param request 请求对象
+         * @param response 响应对象
          * @param handler
          * @return
          * @throws Exception

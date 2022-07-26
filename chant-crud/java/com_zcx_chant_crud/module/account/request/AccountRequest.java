@@ -15,7 +15,7 @@ public class AccountRequest {
     private String password;
 
     @NotNull(message = "邮箱不能为空")
-    @Email(regexp = "", message = "邮箱格式不正确")
+    @Email(regexp = "\\w[-\\w.+]*@([A-Za-z0-9][-A-Za-z0-9]+\\.)+[A-Za-z]{2,14}", message = "邮箱格式不正确")
     private String email;
 
 }
