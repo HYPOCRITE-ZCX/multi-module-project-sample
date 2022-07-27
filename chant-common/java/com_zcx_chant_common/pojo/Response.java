@@ -36,11 +36,11 @@ public class Response<T> implements Serializable {
         this.message = message;
     }
 
-    public static <T> Response success(T data) {
+    public static <R> Response<R> success(R data) {
         return new Response<>(data);
     }
 
-    public static Response error(Integer code, String message) {
+    public static <R> Response<R> error(Integer code, String message) {
         return new Response<>(code, message);
     }
 }

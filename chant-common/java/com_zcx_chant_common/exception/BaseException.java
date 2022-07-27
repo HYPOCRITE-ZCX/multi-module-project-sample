@@ -1,4 +1,4 @@
-package com_zcx_chant_common;
+package com_zcx_chant_common.exception;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

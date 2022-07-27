@@ -1,6 +1,6 @@
 package com_zcx_chant_crud.exception;
 
-import com_zcx_chant_common.BaseException;
+import com_zcx_chant_common.exception.BaseException;
 
 public class SampleException extends BaseException {
 

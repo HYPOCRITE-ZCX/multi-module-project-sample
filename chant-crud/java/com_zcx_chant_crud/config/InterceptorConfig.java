@@ -1,6 +1,7 @@
 package com_zcx_chant_crud.config;
 
 import com_zcx_chant_common.utils.JsonUtil;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.messaging.handler.HandlerMethod;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
@@ -11,20 +12,8 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+@Configuration
 public class InterceptorConfig implements WebMvcConfigurer {
-
-    /**
-     * 解决跨域问题
-     * @param registry
-     */
-    @Override
-    public void addCorsMappings(CorsRegistry registry) {
-        registry.addMapping("/**")
-                .allowedOrigins("*") //放行哪些原始域
-                .allowedMethods("PUT", "DELETE", "POST", "GET") //放行哪些请求方式
-                .allowCredentials(false) //是否发送 Cookie
-                .maxAge(3600);
-    }
 
 
     /**

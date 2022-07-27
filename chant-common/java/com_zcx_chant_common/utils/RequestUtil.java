@@ -7,8 +7,8 @@ public class RequestUtil {
     /**
      * 获取真实ip地址,不返回内网地址
      *
-     * @param request
-     * @return
+     * @param request 请求体对象
+     * @return 真实ip地址的字符串
      */
     public static String getRealIp(HttpServletRequest request) {
         //目前则是网关ip

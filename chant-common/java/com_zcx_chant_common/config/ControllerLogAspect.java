@@ -1,4 +1,4 @@
-package com_zcx_chant_crud.aspect;
+package com_zcx_chant_common.config;
 
 
 import com_zcx_chant_common.utils.JsonUtil;
@@ -42,7 +42,7 @@ public class ControllerLogAspect {
      *
      * 总结，就是 com_zcx_chant_crud.module下一级子包下的所有以Controller结尾的类中所有的public方法
      */
-    @Pointcut("execution(public * com_zcx_chant_crud.module..*Controller.*(..))")
+    @Pointcut("execution(public * *.module..*Controller.*(..))")
     public void logAdvice(){}
 
     @Around("logAdvice()")

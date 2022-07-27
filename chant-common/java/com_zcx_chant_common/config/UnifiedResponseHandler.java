@@ -2,7 +2,7 @@ package com_zcx_chant_common.config;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com_zcx_chant_common.BaseException;
+import com_zcx_chant_common.exception.BaseException;
 import com_zcx_chant_common.pojo.Response;
 import org.springframework.core.MethodParameter;
 import org.springframework.http.MediaType;
