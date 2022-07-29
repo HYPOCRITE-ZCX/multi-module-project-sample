@@ -18,4 +18,6 @@ public class AccountRequest {
     @Email(regexp = "\\w[-\\w.+]*@([A-Za-z0-9][-A-Za-z0-9]+\\.)+[A-Za-z]{2,14}", message = "邮箱格式不正确")
     private String email;
 
+    private String testHump;
+
 }

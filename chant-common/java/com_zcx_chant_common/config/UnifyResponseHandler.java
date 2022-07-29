@@ -12,15 +12,17 @@ import org.springframework.http.server.ServerHttpResponse;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseBodyAdvice;
 
+import java.lang.reflect.Type;
+
 /**
  * 统一响应处理
  */
 @RestControllerAdvice
-public class UnifiedResponseHandler implements ResponseBodyAdvice<Object> {
+public class UnifyResponseHandler implements ResponseBodyAdvice<Object> {
     @Override
     public boolean supports(MethodParameter methodParameter, Class<? extends HttpMessageConverter<?>> aClass) {
         // 如果接口返回的类型本身就是 Response 那就没有必要进行额外的操作，返回false
-        return !methodParameter.getGenericParameterType().equals(Response.class);
+        return !(methodParameter.getParameterType().equals(Response.class));
     }
 
     @Override

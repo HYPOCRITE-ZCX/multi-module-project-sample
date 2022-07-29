@@ -1,5 +1,5 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
   com_zcx_chant_common.config.CommonMvcConfig,\
-  com_zcx_chant_common.config.UnifiedResponseHandler,\
-  com_zcx_chant_common.config.UnifiedExceptionHandler,\
+  com_zcx_chant_common.config.UnifyResponseHandler,\
+  com_zcx_chant_common.config.UnifyExceptionHandler,\
   com_zcx_chant_common.config.ControllerLogAspect

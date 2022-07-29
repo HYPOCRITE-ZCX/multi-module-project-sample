@@ -13,7 +13,8 @@ public class PasswordValidator implements ConstraintValidator<Password, String> 
 
     /**
      * 重写校验方法
-     * @param value 值
+     *
+     * @param value   值
      * @param context 上下文
      * @return 是否校验通过，true通过，false不通过
      */
@@ -27,6 +28,7 @@ public class PasswordValidator implements ConstraintValidator<Password, String> 
 
     /**
      * 校验方法，校验规则
+     *
      * @param password 值
      * @return 是否符合规则，true通过，false不通过
      */

@@ -35,11 +35,16 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-aop</artifactId>
         </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+        </dependency>
     </dependencies>
 
 
     <build>
         <sourceDirectory>java</sourceDirectory>
+        <testSourceDirectory>test</testSourceDirectory>
 
         <resources>
             <resource>

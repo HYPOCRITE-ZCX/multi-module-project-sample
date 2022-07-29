@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
  * 统一异常处理
  */
 @RestControllerAdvice
-public class UnifiedExceptionHandler {
+public class UnifyExceptionHandler {
 
     /**
      * 参数校验异常

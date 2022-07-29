@@ -1,5 +1,7 @@
 package com_zcx_chant_crud.module.account;
 
+import com_zcx_chant_common.enums.BusinessExceptionEnum;
+import com_zcx_chant_common.exception.BusinessException;
 import com_zcx_chant_crud.module.account.request.AccountRequest;
 import org.springframework.web.bind.annotation.*;
 
@@ -16,6 +18,9 @@ public class AccountController {
 
     @PostMapping("login")
     public Object login(@RequestBody @Valid AccountRequest accountRequest) {
+        if (1 == 1) {
+            throw BusinessExceptionEnum.ACCOUNT_OR_PASSWORD_ERROR.newInstance();
+        }
         return new AccountEntity();
     }
 }

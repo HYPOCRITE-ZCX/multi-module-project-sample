@@ -3,13 +3,13 @@ package com_zcx_chant_common.config;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.PropertyNamingStrategy;
 import com.fasterxml.jackson.databind.module.SimpleModule;
 import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.converter.HttpMessageConverter;
 import org.springframework.http.converter.json.Jackson2ObjectMapperBuilder;
 import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
-import org.springframework.web.method.support.HandlerMethodArgumentResolver;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
@@ -53,6 +53,12 @@ public class CommonMvcConfig implements WebMvcConfigurer {
 
         objectMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false); //json串转对象时忽略掉对象中不存在的字段
 
+
+//        配置下划线转驼峰的配置，将字段转为下划线风格
+//        前端传参时使用下划线风格，后端使用驼峰风格
+//        后端响应时将驼峰字段再转为下划线风格
+        objectMapper.setPropertyNamingStrategy(new PropertyNamingStrategy.SnakeCaseStrategy());
+
         // 序列化时将long类型的数据转为String类型
         SimpleModule simpleModule = new SimpleModule();
         simpleModule.addSerializer(Long.class, ToStringSerializer.instance);
@@ -64,18 +70,5 @@ public class CommonMvcConfig implements WebMvcConfigurer {
 
         converters.add(converter);
     }
-
-
-    /**
-     * 配置下划线转驼峰的配置
-     * 前端传参时使用下划线风格，后端使用驼峰风格
-     * 后端响应时将驼峰字段再转为下划线风格
-     * @param resolvers
-     */
-    @Override
-    public void addArgumentResolvers(List<HandlerMethodArgumentResolver> resolvers) {
-        resolvers.add(new UnderlineToHumpArgumentResolver());
-    }
-
 
 }

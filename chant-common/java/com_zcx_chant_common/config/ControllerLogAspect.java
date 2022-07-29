@@ -35,12 +35,12 @@ public class ControllerLogAspect {
      * 解析：
      * public： 所有用 public 修饰的方法
      * 第一个 * ：代表返回类型，* 代表任意类型
-     * com_zcx_chant_crud.module 包
-     * com_zcx_chant_crud.module 后面的两个点(..) 代表当前包和包下的所有子包
+     * *.module 包
+     * *.module 后面的两个点(..) 代表当前包和包下的所有子包
      * *Controller 代表所哟以Controller结尾的类
      * *(..)，* 表示类中的所有方法，(..) 表示任意参数
      *
-     * 总结，就是 com_zcx_chant_crud.module下一级子包下的所有以Controller结尾的类中所有的public方法
+     * 总结，就是 *.module下一级子包下的所有以Controller结尾的类中所有的public方法
      */
     @Pointcut("execution(public * *.module..*Controller.*(..))")
     public void logAdvice(){}
