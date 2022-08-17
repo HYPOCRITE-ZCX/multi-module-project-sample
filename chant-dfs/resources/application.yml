@@ -1,13 +1,14 @@
 server:
-  port: 9091
+  port: 9092
 
 spring:
   profiles:
     active: dev
   mvc:
     throw-exception-if-no-handler-found: true
-  resources:
-    add-mappings: false
+  web:
+    resources:
+      add-mappings: false
 
 
 minio:

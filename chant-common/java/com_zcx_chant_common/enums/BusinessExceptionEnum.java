@@ -5,7 +5,9 @@ import com_zcx_chant_common.exception.BusinessException;
 public enum BusinessExceptionEnum {
 
 
-    ACCOUNT_OR_PASSWORD_ERROR(5001, "用户名或密码错误");
+    ACCOUNT_OR_PASSWORD_ERROR(5001, "账号或密码错误"),
+
+    LOGIN_INFORMATION_OUTDATED(5002, "登录信息过期，请从新登录");
 
 
     /**

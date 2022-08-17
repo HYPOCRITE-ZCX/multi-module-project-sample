@@ -1,11 +1,11 @@
 ### 账号登录
-POST http://127.0.0.1:9091/account/login/ghjkl
+POST http://127.0.0.1:9091/account/login
 Content-Type: application/json
 
 {
   "username": "zcx",
   "password": "1206",
-  "email": null,
+  "email": "zvz@qq.com",
   "test_hump": "测试下划线转驼峰"
 }
 ###
