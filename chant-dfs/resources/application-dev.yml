@@ -1,5 +1,4 @@
 
-
 spring:
   rabbitmq:
     host: 127.0.0.1
@@ -7,3 +6,9 @@ spring:
     username: root
     password: zcx15672
     virtual-host: /vir
+
+minio:
+  endpoint: http://172.16.3.28:10000
+  accessKey: admin
+  secretKey: 1206
+  bucketName: blog
